@@ -1,6 +1,7 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
 const startBtn = document.getElementById("starts");
+// starts spelling mistake
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -47,6 +48,7 @@ const typeController = (e) => {
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
     errorCount++;
+    // errorCount was missing here
   }
 
   // check if given question text is equal to user typed text
@@ -110,7 +112,7 @@ const start = () => {
 
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-
+    // `` sign mistake
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
